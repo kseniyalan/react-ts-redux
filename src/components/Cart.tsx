@@ -14,7 +14,7 @@ export default function Cart({ onClose }: CartProps) {
         <h2>Your Cart</h2>
         <CartItems />
         <p id="cart-actions">
-          <button onClick={onClose}>Close</button>
+          <button type="button" onClick={onClose}>Close</button>
         </p>
       </dialog>
     </>,

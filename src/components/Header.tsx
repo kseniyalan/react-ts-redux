@@ -22,7 +22,12 @@ export default function Header() {
           <h1>Elegant Redux</h1>
         </div>
         <p>
-          <button onClick={handleOpenCartClick}>Cart (0)</button>
+          <button
+            type="button"
+            onClick={handleOpenCartClick}
+          >
+            Cart (0)
+          </button>
         </p>
       </header>
     </>

@@ -14,11 +14,19 @@ export default function CartItems() {
                   <span> ({formattedPrice})</span>
                 </div>
                 <div className="cart-item-actions">
-                  <button onClick={() => handleRemoveFromCart(item.id)}>
+                  <button
+                    type="button"
+                    onClick={() => handleRemoveFromCart(item.id)}
+                  >
                     -
                   </button>
                   <span>{item.quantity}</span>
-                  <button onClick={() => handleAddToCart(item)}>+</button>
+                  <button
+                    type="button" 
+                    onClick={() => handleAddToCart(item)}
+                  >
+                    +
+                  </button>
                 </div>
               </li>
             );
