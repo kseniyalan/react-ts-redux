@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { useCartSelector } from '../store/hooks.ts';
 
 import Cart from './Cart.tsx';
 
 export default function Header() {
   const [cartIsVisible, setCartIsVisible] = useState(false);
+  const cartQuantity = useCartSelector((state) => state.cart.items.reduce((acc, item) => acc + item.quantity, 0));
 
   function handleOpenCartClick() {
     setCartIsVisible(true);
@@ -26,7 +28,7 @@ export default function Header() {
             type="button"
             onClick={handleOpenCartClick}
           >
-            Cart (0)
+            Cart ({cartQuantity})
           </button>
         </p>
       </header>

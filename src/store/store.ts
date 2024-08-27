@@ -13,4 +13,8 @@ export const store = configureStore({
 //const name = 'Joe';
 //type customType = typeof name; // -> it has type 'Joe'
 // type AppDispatch -> which types of actions can be dispatched
-export type AppDispatch = typeof store.dispatch; 
+export type AppDispatch = typeof store.dispatch;
+
+// type RootState -> which types of states are in the store
+// ReturnType is a utility type that extracts the return type of a function type
+export type RootState = ReturnType<typeof store.getState>;  
